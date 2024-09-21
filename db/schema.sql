@@ -13,6 +13,7 @@ create table role (
     title varchar(30) unique not null,
     salary decimal not null,
     department_id integer not null
+    foreign key (department_id) references (department_id)
 )
 
 create table employee (
@@ -21,4 +22,5 @@ create table employee (
     last_name varchar(30) not null,
     role_id integer not null,
     manager_id integer
+    foreign key (role_id) references (role_id)
 )
