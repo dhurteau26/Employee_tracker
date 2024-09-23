@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "start:dev":"concurrently \"npm run server:dev\" \"wait-on tcp:3001 && npm run client:dev\""
   },
   "author": "",
   "license": "ISC",

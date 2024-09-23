@@ -9,4 +9,13 @@ import updateRoleRoute from './updateRoleRoute.js';
 import express from 'express';
 const router = express.Router();
 
-router.use('/addDep')
+router.use('/addDepartment', addDepRoutes);
+router.use('/addEomployee', addEmpRoutes);
+router.use('/addrole', addroleRoutes);
+router.use('/getAllDepartments', getAllDepRoutes);
+router.use('/getAllEmployees', getAllEmpRoutes);
+router.use('/getAllroles', getAllRolesRoutes);
+router.use('/getEmployee', getEmpRoutes);
+router.use('/updateRole', updateRoleRoute);
+
+export default router;
